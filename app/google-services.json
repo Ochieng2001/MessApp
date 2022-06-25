@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446108688905",
+    "project_id": "fir-375a3",
+    "storage_bucket": "fir-375a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446108688905:android:d865f5e9eead4a8edf8ed8",
+        "android_client_info": {
+          "package_name": "com.example.kibumess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446108688905-nacd9uafk7h5p3es0q3dmdkkcd8sircf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY_ECXRpJf0mQO8vUHjOPB04DK2Yyo4tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446108688905-nacd9uafk7h5p3es0q3dmdkkcd8sircf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
