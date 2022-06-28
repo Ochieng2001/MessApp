@@ -4,9 +4,9 @@ import com.example.kibumess.Model.Users;
 
 public class Prevalent
 {
-    private static Users CurrentOnlineUser;
+    public static Users currentOnlineUser;
 
-    public static  final String UserPhonekey="UserPhone";
-    public static  final String UserPasswordKey="UserPassword";
+    public static final String UserPhoneKey = "UserPhone";
+    public static final String UserPasswordKey = "UserPassword";
 
 }
