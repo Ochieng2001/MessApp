@@ -50,8 +50,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
 
         CategoryName = getIntent().getExtras().get("category").toString();
-        ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
-        ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Food Images");
+        ProductsRef = FirebaseDatabase.getInstance().getReference().child("Foods");
 
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);

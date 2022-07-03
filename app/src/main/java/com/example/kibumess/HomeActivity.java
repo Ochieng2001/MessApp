@@ -2,27 +2,43 @@ package com.example.kibumess;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.AppBarConfiguration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.kibumess.Model.Food;
+import com.example.kibumess.Prevalent.Prevalent;
+import com.example.kibumess.ViewHolder.FoodViewHolder;
 import com.example.kibumess.databinding.ActivityHomeBinding;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
 public class HomeActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
-    private AppBarConfiguration mAppBarConfiguration;
+   // private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
+
+    private DatabaseReference FoodsRef;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +49,15 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
         binding.appBarHome.toolbar.setTitle("Home");
         setSupportActionBar(binding.appBarHome.toolbar);
+        FoodsRef= FirebaseDatabase.getInstance().getReference().child("Foods");
 
 
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+             Intent intent=new Intent(HomeActivity.this,CartActivity.class);
+             startActivity(intent);
             }
         });
         DrawerLayout drawer=(DrawerLayout)  findViewById(R.id.drawer_layout);
@@ -51,19 +69,72 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         NavigationView navigationView=(NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        View headerView=navigationView.getHeaderView(0);
+        TextView userNameTextView=headerView.findViewById(R.id.user_profie_name);
+        CircleImageView circleImageView=headerView.findViewById(R.id.user_profile_image);
 
-//        DrawerLayout drawer = binding.drawerLayout;
-//        NavigationView navigationView = binding.navView;
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-//        mAppBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-//                .setOpenableLayout(drawer)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
-//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
+        userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+
+        recyclerView=findViewById(R.id.recycler_menu);
+        recyclerView.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+        }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions<Food> options=
+                new FirebaseRecyclerOptions.Builder<Food>()
+                        .setQuery(FoodsRef,Food.class).build();
+
+
+        FirebaseRecyclerAdapter<Food, FoodViewHolder>adapter=
+                new FirebaseRecyclerAdapter<Food, FoodViewHolder>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull FoodViewHolder holder, int position, @NonNull Food model)
+                    {
+                        holder.txtProductName.setText(model.getPname());
+                        holder.txtProductDescription.setText(model.getDescription());
+                        holder.txtProductPrice.setText("Price= " + model.getPrice() +"Ksh");
+                        Picasso.get().load(model.getImage()).into(holder.imageView);
+
+
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(HomeActivity.this, FoodDetailsActivity.class);
+                                intent.putExtra("pid",model.getPid());
+                                startActivity(intent);
+
+                            }
+                        });
+
+                    }
+
+                    @NonNull
+                    @Override
+                    public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+                    {
+                        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.food_items_layout,parent,false);
+                        FoodViewHolder holder=new FoodViewHolder(view);
+                        return holder;
+                    }
+                };
+
+        //setting the adapter
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
+
+
+
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -81,6 +152,10 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+
+
+
+
 
 
     @Override
@@ -105,6 +180,9 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
         if (id == R.id.nav_cart)
         {
+            Intent intent=new Intent(HomeActivity.this,CartActivity.class);
+            startActivity(intent);
+
 
         }
         else if (id == R.id.nav_orders)

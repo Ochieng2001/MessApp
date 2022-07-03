@@ -16,16 +16,23 @@
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_admin_addcategory.xml" value="0.11851851851851852" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_admin_category.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_admin_category2.xml" value="0.11875" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_cart.xml" value="0.18" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_cornfirm_order.xml" value="0.18" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_food_details.xml" value="0.15" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_food_item_layout.xml" value="0.1037037037037037" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_home.xml" value="0.10824742268041238" />
-        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_login.xml" value="0.15" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_settings.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/activity_settings.xml" value="0.12" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/app_bar_home.xml" value="0.1" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/cart_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/content_home.xml" value="0.10740740740740741" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/food_item_layout.xml" value="0.15925925925925927" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/food_items_layout.xml" value="0.1" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/fragment_gallery.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/fragment_slideshow.xml" value="0.12552083333333333" />
-        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/nav_header_home.xml" value="0.15" />
+        <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/layout/nav_header_home.xml" value="0.1" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/menu/activity_home_drawer.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
         <entry key="..\:/Users/KIBUCU.DESKTOP-3V00R11/AndroidStudioProjects/KibuMess/app/src/main/res/menu/home.xml" value="0.1" />

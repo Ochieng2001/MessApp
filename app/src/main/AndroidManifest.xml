@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kibumess">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KibuMess"
         tools:targetApi="31">
+        <activity
+            android:name=".ConfirmOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FoodDetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />
