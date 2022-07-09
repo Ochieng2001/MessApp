@@ -46,5 +46,30 @@ public class SettingsActivity extends AppCompatActivity
         //  userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
 
     }
+//
+//    private void userInfoDisplay(CircleImageView profileImageView, EditText fullNameEditText, EditText userPhoneEditText, EditText addressEditText)
+//    {
+//        DatabaseReference UsersRef= FirebaseDatabase.getInstance().getReference().child("Users")
+//                .child(Prevalent.currentOnlineUser.getPhone());
+//        UsersRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                if(dataSnapshot.exists())
+//                {
+//                    if(dataSnapshot.child("image").exists())
+//                    {
+//
+//                    }
+//
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 
 }

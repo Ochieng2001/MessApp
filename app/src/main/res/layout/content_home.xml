@@ -21,6 +21,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_menu"
         android:layout_width="match_parent"
+        app:spanCount="2"
         android:layout_height="match_parent"
         >
 

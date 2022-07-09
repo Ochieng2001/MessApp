@@ -1,74 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.rey.material.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConfirmOrderActivity">
 
-    <com.rey.material.widget.TextView
-        android:id="@+id/txt"
-        android:layout_width="match_parent"
+<!--    <com.rey.material.widget.TextView-->
+<!--        android:id="@+id/txt"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginEnd="25dp"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:background="@drawable/butttons"-->
+<!--        android:text="Payment Activity"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textStyle="bold">-->
+
+<!--    </com.rey.material.widget.TextView>-->
+
+<!--    <com.rey.material.widget.TextView-->
+<!--        android:id="@+id/amount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/txt"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/input_design"-->
+<!--        android:hint=" Total Amount"-->
+<!--        android:textAlignment="center"-->
+
+<!--        android:textSize="20dp">-->
+
+<!--    </com.rey.material.widget.TextView>-->
+
+<!--    <com.rey.material.widget.EditText-->
+<!--        android:id="@+id/phonenumber"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/amount"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/input_design"-->
+<!--        android:hint="Enter Phone Number"-->
+
+<!--        android:inputType="number"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp">-->
+
+<!--    </com.rey.material.widget.EditText>-->
+
+
+<!--    <com.rey.material.widget.Button-->
+<!--        android:id="@+id/confirm_button"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/phonenumber"-->
+<!--        android:layout_alignParentBottom="false"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="@drawable/butttons"-->
+<!--        android:text="Confirm"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="20dp">-->
+
+<!--    </com.rey.material.widget.Button>-->
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/butttons"
-        android:text="Payment Activity"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
-        android:textStyle="bold">
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Note: Use this format e.g 0743793901"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </com.rey.material.widget.TextView>
-
-    <com.rey.material.widget.TextView
-        android:id="@+id/amount"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/txt"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:textAlignment="center"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/input_design"
-        android:hint=" Total Amount"
-
-        android:textSize="20dp">
-
-    </com.rey.material.widget.TextView>
-
-    <com.rey.material.widget.EditText
-        android:id="@+id/phonenumber"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/amount"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/input_design"
-        android:hint="Enter Phone Number"
-
+    <TextView
+        android:id="@+id/etAmount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:ems="20"
+        android:hint="Enter Registration Amount to pay"
         android:inputType="number"
-        android:textAlignment="center"
-        android:textSize="20dp">
 
-    </com.rey.material.widget.EditText>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
-
-    <com.rey.material.widget.Button
-        android:id="@+id/confirm_button"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/phonenumber"
-        android:layout_alignParentBottom="false"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/butttons"
-        android:text="Confirm"
-        android:textColor="@android:color/white"
-        android:textSize="20dp">
+        android:layout_marginTop="32dp"
+        android:text="PAY NOW"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
-    </com.rey.material.widget.Button>
-
-</com.rey.material.widget.RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
