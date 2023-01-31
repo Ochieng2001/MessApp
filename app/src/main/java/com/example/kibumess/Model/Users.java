@@ -1,7 +1,7 @@
 package com.example.kibumess.Model;
 
 public class Users {
-    private String name, password, phone, image, address;
+    private String name, password, phone, image;
 
     public Users() {
     }
@@ -11,7 +11,7 @@ public class Users {
         this.password = password;
         this.phone = phone;
         this.image = image;
-        this.address = address;
+
     }
 
     public String getName() {
@@ -46,11 +46,5 @@ public class Users {
         this.image = image;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 }

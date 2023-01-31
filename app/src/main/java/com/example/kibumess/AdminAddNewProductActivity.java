@@ -224,7 +224,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             Intent intent = new Intent(AdminAddNewProductActivity.this, AdminCategoryActivity.class);
-                            startActivity(intent);
+                            tartActivity(intent);
 
                             loadingBar.dismiss();
                             Toast.makeText(AdminAddNewProductActivity.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
@@ -235,6 +235,9 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                             String message = task.getException().toString();
                             Toast.makeText(AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                         }
+                    }
+
+                    private void tartActivity(Intent intent) {
                     }
                 });
     }

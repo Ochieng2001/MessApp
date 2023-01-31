@@ -13,7 +13,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="190dp"
-        android:src="@drawable/orderimag"/>
+        android:src="@drawable/orderimag" />
 
 
     <EditText

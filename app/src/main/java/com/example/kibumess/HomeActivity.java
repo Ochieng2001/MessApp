@@ -40,12 +40,23 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
+    private  String type="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        Intent intent=getIntent();
+        Bundle bundle=intent.getExtras();
+        if(bundle !=null)
+        {
+            type=getIntent().getExtras().get("Admin").toString();
+        }
+
 
         binding.appBarHome.toolbar.setTitle("Home");
         setSupportActionBar(binding.appBarHome.toolbar);
@@ -73,7 +84,13 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
         TextView userNameTextView=headerView.findViewById(R.id.user_profie_name);
         CircleImageView circleImageView=headerView.findViewById(R.id.user_profile_image);
 
-        userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+        if(!type.equals("Admin"))
+        {
+            userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+            Picasso.get()
+                    .load(Prevalent.currentOnlineUser.getImage())
+                    .placeholder(R.drawable.profile).into(circleImageView);
+        }
 
         recyclerView=findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
@@ -106,10 +123,25 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View v) {
-                                Intent intent = new Intent(HomeActivity.this, FoodDetailsActivity.class);
-                                intent.putExtra("pid",model.getPid());
-                                startActivity(intent);
+                            public void onClick(View v)
+                            {
+
+                                if(type.equals("Admin"))
+                                {
+                                    Intent intent = new Intent(HomeActivity.this, AdminMaintainFoodActivity.class);
+                                    intent.putExtra("pid",model.getPid());
+                                    startActivity(intent);
+
+                                }
+                                else
+                                {
+                                    Intent intent = new Intent(HomeActivity.this, FoodDetailsActivity.class);
+                                    intent.putExtra("pid",model.getPid());
+                                    startActivity(intent);
+
+                                }
+
+
 
                             }
                         });
@@ -185,8 +217,10 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
 
         }
-        else if (id == R.id.nav_orders)
+        else if (id == R.id.nav_search)
         {
+            Intent intent=new Intent(HomeActivity.this,SearchFoodActivity.class);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_categories)

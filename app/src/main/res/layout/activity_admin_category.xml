@@ -65,13 +65,34 @@
             android:src="@drawable/ic_launcher_background"
             />
 
-
-
     </LinearLayout>
 
+    <Button
+        android:id="@+id/maintain_food_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/butttons"
+        android:text="Maintain Foods"
 
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
-
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/butttons"
+        android:text="Logout"
+        android:textAllCaps="false"
+         android:layout_above="@id/maintain_food_btn"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

@@ -33,7 +33,8 @@ public class CartActivity extends AppCompatActivity {
    private RecyclerView.LayoutManager layoutManager;
    private Button nextProcesBtn;
    private TextView txtTotalAmount;
-   private int overTotalPrice=0;
+   private int overTotalPrice;
+
 
 
     @Override
@@ -49,23 +50,16 @@ public class CartActivity extends AppCompatActivity {
         txtTotalAmount=findViewById(R.id.total_price);
 
 
+
         nextProcesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                txtTotalAmount.setText("Total Price = Ksh "+String.valueOf(overTotalPrice));
-                 String txt=txtTotalAmount.getText().toString();
-
-
+                txtTotalAmount.setText(String.valueOf(overTotalPrice));
                 Intent intent=new Intent(CartActivity.this, ConfirmOrderActivity.class);
-
-                intent.putExtra("Total Price",String.valueOf(overTotalPrice));
-
+                intent.putExtra(ConfirmOrderActivity.PRICE,overTotalPrice);
 
                 startActivity(intent);
-                finish();
-
-
             }
         });
 
@@ -104,9 +98,6 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         EditRemoveItem();
-
-
-
 
                     }
 
@@ -161,8 +152,6 @@ public class CartActivity extends AppCompatActivity {
 
             }
 
-
-
             @NonNull
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -172,8 +161,8 @@ public class CartActivity extends AppCompatActivity {
             }
         };
 
-recyclerView.setAdapter(adapter);
-adapter.startListening();
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
     }
 
 
