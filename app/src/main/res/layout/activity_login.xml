@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/icon"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -60,17 +60,17 @@
 
         <com.rey.material.widget.CheckBox
             android:id="@+id/checkbox"
+            style="@style/Material.Drawable.CheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Material.Drawable.CheckBox"
+            android:layout_marginLeft="17dp"
+            android:gravity="center_vertical"
             android:text="Remember me"
             android:textColor="@color/colorPrimaryDark"
-            app:cbd_strokeColor="@color/colorPrimaryDark"
-            android:gravity="center_vertical"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginLeft="17dp"
-            />
+            app:cbd_strokeColor="@color/colorPrimaryDark"
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:id="@+id/forget_password_link"
             android:layout_width="wrap_content"
@@ -104,15 +104,15 @@
         android:id="@+id/admin_panel_1ink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am an Admin?"
-        android:layout_alignParentEnd="true"
         android:layout_below="@+id/login_btn"
-        android:textSize="20sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
         android:layout_marginLeft="80dp"
-        android:layout_marginEnd="23dp"
-        />
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="19dp"
+        android:text="I am an Admin?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/not_admin_panel_1ink"

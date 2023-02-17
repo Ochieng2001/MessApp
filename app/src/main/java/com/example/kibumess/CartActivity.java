@@ -92,7 +92,7 @@ public class CartActivity extends AppCompatActivity {
                 //deleting items from the cart activity
 //                int oneTypeProductPrice=((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
 //                overTotalPrice=overTotalPrice+oneTypeProductPrice;
-                txtTotalAmount.setText(String.valueOf("Ksh. "+overTotalPrice));
+                txtTotalAmount.setText("Ksh. " + overTotalPrice);
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -103,7 +103,7 @@ public class CartActivity extends AppCompatActivity {
 
                     private void EditRemoveItem() {
 
-                        CharSequence options[]=new CharSequence[]
+                        CharSequence[] options =new CharSequence[]
                                 {
                                         "Edit",
                                         "Remove"

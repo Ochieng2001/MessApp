@@ -38,10 +38,11 @@
 
                 <com.rey.material.widget.TextView
                     android:id="@+id/update_account_settings_btn"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="89dp"
+                    android:layout_height="41dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
                     android:text="Update"
                     android:textAlignment="center"

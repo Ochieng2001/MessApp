@@ -20,8 +20,8 @@ public class AdminCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_category);
 
 
-        breakft = (ImageView) findViewById(R.id.breakfast);
-        lunch_supper = (ImageView) findViewById(R.id.lunch_dinner);
+        breakft = findViewById(R.id.breakfast);
+        lunch_supper = findViewById(R.id.lunch_dinner);
         maintainProductsBtn=findViewById(R.id.maintain_food_btn);
 
         maintainProductsBtn.setOnClickListener(new View.OnClickListener() {

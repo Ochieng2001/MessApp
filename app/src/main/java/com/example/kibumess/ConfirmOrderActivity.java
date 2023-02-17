@@ -78,7 +78,7 @@ public class ConfirmOrderActivity extends AppCompatActivity implements View.OnCl
 
         mPay.setOnClickListener(this);
 
-       mAmount=(TextView) findViewById(R.id.etAmount);
+       mAmount= findViewById(R.id.etAmount);
         Intent i=getIntent();
         Amount=i.getIntExtra(PRICE,0);
         mAmount.setText(String.valueOf(Amount));

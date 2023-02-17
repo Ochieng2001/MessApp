@@ -42,15 +42,15 @@ public class LoginActivity extends AppCompatActivity
         setContentView(R.layout.activity_login);
 
 
-        LoginButton = (Button) findViewById(R.id.login_btn);
-        InputPassword = (EditText) findViewById(R.id.login_password_input);
-        InputPhoneNumber = (EditText) findViewById(R.id.login_phone_number_input);
-        AdminLink = (TextView) findViewById(R.id.admin_panel_1ink);
+        LoginButton = findViewById(R.id.login_btn);
+        InputPassword = findViewById(R.id.login_password_input);
+        InputPhoneNumber = findViewById(R.id.login_phone_number_input);
+        AdminLink = findViewById(R.id.admin_panel_1ink);
         NotAdminLink =findViewById(R.id.not_admin_panel_1ink);
         loadingBar = new ProgressDialog(this);
 
 
-        chkBoxRememberMe = (CheckBox) findViewById(R.id.checkbox);
+        chkBoxRememberMe = findViewById(R.id.checkbox);
         Paper.init(this);
 
 
@@ -145,6 +145,7 @@ public class LoginActivity extends AppCompatActivity
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
                             else if (parentDbName.equals("Users"))

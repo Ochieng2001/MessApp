@@ -187,7 +187,7 @@ public class FoodDetailsActivity extends AppCompatActivity {
 
     }
     private void display(int number) {
-        TextView displayInteger = (TextView) findViewById(
+        TextView displayInteger = findViewById(
                 R.id.number_btn);
         displayInteger.setText("" + number);
     }

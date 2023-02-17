@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "446108688905",
-    "firebase_url": "https://fir-375a3-default-rtdb.firebaseio.com",
-    "project_id": "fir-375a3",
-    "storage_bucket": "fir-375a3.appspot.com"
+    "project_number": "487728922403",
+    "project_id": "kibumess-b6f91",
+    "storage_bucket": "kibumess-b6f91.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:446108688905:android:d865f5e9eead4a8edf8ed8",
+        "mobilesdk_app_id": "1:487728922403:android:b4930694c3065367f35696",
         "android_client_info": {
           "package_name": "com.example.kibumess"
         }
       },
       "oauth_client": [
         {
-          "client_id": "446108688905-nacd9uafk7h5p3es0q3dmdkkcd8sircf.apps.googleusercontent.com",
+          "client_id": "487728922403-02hvtdskvhcor7on0ehn9fhu5kvqtgl3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAY_ECXRpJf0mQO8vUHjOPB04DK2Yyo4tc"
+          "current_key": "AIzaSyDQSjNhtF9Tr5Eina2iHo_tDMtC4HvDaoY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "446108688905-nacd9uafk7h5p3es0q3dmdkkcd8sircf.apps.googleusercontent.com",
+              "client_id": "487728922403-02hvtdskvhcor7on0ehn9fhu5kvqtgl3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

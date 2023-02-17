@@ -71,13 +71,13 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
              startActivity(intent);
             }
         });
-        DrawerLayout drawer=(DrawerLayout)  findViewById(R.id.drawer_layout);
+        DrawerLayout drawer= findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(
                 this,drawer,binding.appBarHome.toolbar,R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView=(NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView= findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         View headerView=navigationView.getHeaderView(0);
@@ -100,10 +100,16 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
         }
 
+
+        // Food Adapter For RecyclerView
     @Override
     protected void onStart() {
         super.onStart();
 
+
+        /* Mapping Firebase data and POJO class generated from Firebase DB Food Items
+        to the Adapter Adapter.
+        */
         FirebaseRecyclerOptions<Food> options=
                 new FirebaseRecyclerOptions.Builder<Food>()
                         .setQuery(FoodsRef,Food.class).build();
@@ -170,7 +176,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -242,7 +248,7 @@ public class HomeActivity extends AppCompatActivity  implements NavigationView.O
             finish();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

@@ -59,12 +59,12 @@ public class SettingsActivity extends AppCompatActivity
 
         storageProfilePrictureRef = FirebaseStorage.getInstance().getReference().child("Profile pictures");
 
-        profileImageView = (CircleImageView) findViewById(R.id.settings_profile_image);
+        profileImageView = findViewById(R.id.settings_profile_image);
         fullNameEditText =  findViewById(R.id.settings_full_name);
-        userPhoneEditText = (EditText) findViewById(R.id.settings_phone_number);
-        profileChangeTextBtn = (TextView) findViewById(R.id.profile_image_change_btn);
-        closeTextBtn = (TextView) findViewById(R.id.close_settings_btn);
-        saveTextButton = (TextView) findViewById(R.id.update_account_settings_btn);
+        userPhoneEditText = findViewById(R.id.settings_phone_number);
+        profileChangeTextBtn = findViewById(R.id.profile_image_change_btn);
+        closeTextBtn = findViewById(R.id.close_settings_btn);
+        saveTextButton = findViewById(R.id.update_account_settings_btn);
 
 
           userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);

@@ -9,7 +9,7 @@ public class AccessToken {
     public String accessToken;
     @SerializedName("expires_in")
     @Expose
-    private String expiresIn;
+    private final String expiresIn;
 
     public AccessToken(String accessToken, String expiresIn) {
         this.accessToken = accessToken;
